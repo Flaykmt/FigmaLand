@@ -1,0 +1,60 @@
+@import 'variable.scss';
+//Typography
+.title{
+  font-size: 48px;
+  line-height: 55px;
+  color: $text;
+}
+.h3{
+  font-family: G7;
+  font-size: 20px;
+  line-height: 28px;
+  color: $text;
+}
+.h4{
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  color: $second-text;
+}
+.h6{
+  font-size: 16px;
+  color: $second-text;
+}
+.descr{
+  font-size: 18px;
+  line-height: 25px; 
+  color: $second-text;
+}
+.link{
+  font-size: 15px;
+  line-height: 28px;
+  color: $text;
+}
+
+//Basic Components
+.btn{
+  background-color: $primary;
+  color: $light-text;
+  border-radius: 35px;
+  padding: 18px 38px;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  width: max-content;
+  transition: 300ms;
+  border: none;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.input{
+  font-size: 19px;
+  line-height: 16px;
+  color: #18171D;
+  padding: 19px 35px;
+  border: 1px solid #E8E8E8;
+  border-radius: 39px;
+  outline: none;
+  resize: none;
+}

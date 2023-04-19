@@ -1,0 +1,384 @@
+@import 'components.scss';
+@import 'font.scss';
+@import 'normalize.scss';
+@import 'variable.scss';
+
+//Header
+.header{
+  background: url(../assets/img/header-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 39px 0;
+    &.container{
+      max-width: 1130px;
+    }
+    &-list{
+      display: flex;
+      align-items: center;
+      gap: 21px;
+      a{
+        color: $light-text;
+      }
+    }
+    &-link{
+      display: flex;
+      gap: 24px;
+    }
+  }
+  &__content{
+    height: 1042px;
+    text-align: center;
+    color: $light-text;
+    h1{
+      font-size: 74px;
+      line-height: 84px;
+      font-family: G7;
+      padding: 110px 0 0;
+    }
+    p{
+      color: $light-text;
+      padding: 17px 0 90px;
+    }
+    a{
+      margin: 0 auto;
+      padding: 16px 62px;
+    }
+  }
+}
+
+//Burger Menu
+.burger__menu{
+  display: none;
+  padding: 10px;
+  width: 100%;
+  button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    z-index: 5;
+  }
+  &-list{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    right: 40px;
+    top: -150%;
+    background-color: #252B42;
+    padding: 50px;
+    border-radius: 10px;
+    gap: 20px;
+    align-items: center;
+    z-index: 4;
+    opacity: 0;
+    transition: 600ms;
+    a{
+      color: #fff;
+    }
+    .btn{
+      color: #fff;
+      padding: 7px 17px;
+      margin-top: 20px;
+    }
+  }
+}
+.active-list{
+  opacity: 1;
+  top: 15%;
+}
+
+
+//MAIN
+.features{
+  text-align: center;
+  padding: 100px 15px 60px;
+  &__cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    padding: 80px 0 132px;
+    &.container{
+      max-width: 869px;
+    }
+    &-card{
+      width: 255px;
+      h3{
+        padding: 10px 0;
+      }
+    }
+  }
+  &__video{
+    background-image: url(../assets/img/features-video.png);
+    background-repeat: no-repeat;
+    width: 1177px;
+    height: 658px;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 44px;
+  }
+}
+
+.fatest{
+  display: flex;
+  padding: 283px 15px;
+  justify-content: space-between;
+  &.container{
+    max-width: 1243px;
+  }
+  .h4{
+    padding: 7px 0 60px;
+  }
+  a{
+    padding: 16px 60px;
+    font-family: G7;
+  }
+}
+
+.finger{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  &.container{
+    max-width: 1448px;
+  }
+  .title{
+    padding: 7px 0 15px;
+  }
+  a{
+    padding: 16px 60px;
+    font-family: G7;
+  }
+  form{
+    display: flex;
+    padding: 36px 0 0;
+    gap: 12px;
+  }
+}
+
+.partner{
+  text-align: center;
+  padding: 100px 15px 100px;
+  &__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 0;
+    &.container{
+      max-width: 1107px;
+    }
+    &-card{
+      padding: 31px 40px 32px 40px;
+      border: 1px solid #D8D8D8;
+      h6{
+        padding: 0 0 15px;
+      }
+    }
+  }
+  a{
+    font-weight: 700;
+    padding: 16px 60px;
+    margin: 0 auto;
+  }
+}
+
+.testim{
+  text-align: center;
+  padding: 0 15px 100px;
+  > img{
+    padding: 80px 0 50px;
+  }
+  &__user{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 13px;
+    padding: 52px 0 82px;
+  }
+  a{
+    margin: 0 auto;
+  }
+}
+
+.pricing{
+  text-align: center;
+  background-color: #252B42;
+  padding: 100px 15px;
+  .title{
+    color: $light-text;
+  }
+  .h4{
+    color: $light-text;
+    padding: 7px 0 80px;
+  }
+  .container{
+    display: flex;
+    gap: 50px;
+    max-width: 1105px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__card{
+    padding: 40px 0;
+    background-color: #fff;
+    width: 335px;
+    border-radius: 10px;
+    transition: 300ms;
+    &-price{
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      align-items: center;
+      padding: 18px 0;
+      gap: 10px;
+      h1{
+        font-size: 74px;
+        line-height: 84px;
+        font-weight: 700;
+        color: $text;
+      }
+    }
+    &-nav{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 0 30px;
+    }
+    .btn{
+      margin: 0 auto;
+      padding: 18px 75px;
+    }
+    &:hover{
+      background-color: $primary;
+      padding: 83px 0;
+      h3{
+        color: $light-text;
+      }
+      h6{
+        color: $light-text;
+        font-weight: 400;
+      }
+      h1{
+        color: $light-text;
+      }
+      a{
+        color: $light-text;
+      }
+      .btn{
+        color: $primary;
+        background-color: $light-text;
+      }
+    }
+  }
+}
+
+.contact{
+  text-align: center;
+  padding: 203px 15px 102px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 0;
+    flex-wrap: wrap;
+    &.container{
+      max-width: 1228px;
+    }
+    form{
+      padding: 52px 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      border: 1px solid #DDDDDD;
+      border-radius: 20px;
+      box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+      input{
+        width: 353px;
+      }
+      textarea{
+        padding: 23px 0 0 20px;
+        border-radius: 0px;
+        width: 353px;
+      }
+    }
+    &-map{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 50px;
+      &-info{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        &-card{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+      &-link{
+        display: flex;
+        justify-content: flex-start;
+        gap: 24px;
+      }
+    }
+  }
+}
+
+//FOOTER
+.footer{
+  background-color: #252B42;
+  padding: 0 15px;
+  .container{
+    max-width: 991px;
+    padding: 150px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h3{
+    color: $light-text;
+    padding: 0 0 15px;
+  }
+  &__nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .link{
+      color: $light-text;
+    }
+    &.center{
+      padding: 0 86px 0 132px;
+    }
+  }
+  &__contact{
+    padding: 0 0 0 177px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    p, a{
+      display: flex;
+      align-items: center;
+      font-family: R4;
+      gap: 10px;
+      color: $light-text;
+    }
+    &-link{
+      display: flex;
+      padding: 30px 0 0;
+      gap: 24px;
+    }
+  }
+}
